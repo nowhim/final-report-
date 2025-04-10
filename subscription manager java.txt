@@ -1,0 +1,16 @@
+public class SubscriptionManager {
+    private boolean isPremium;
+
+    public SubscriptionManager(boolean isPremium) {
+        this.isPremium = isPremium;
+    }
+
+    public boolean canAccessPremium() {
+        return isPremium;
+    }
+
+    public void upgradeToPremium() {
+        isPremium = true;
+    }
+}
+

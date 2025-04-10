@@ -1,0 +1,23 @@
+public class Goal {
+    private String goalType;
+    private double targetValue;
+    private boolean isAchieved;
+
+    public Goal(String goalType, double targetValue) {
+        this.goalType = goalType;
+        this.targetValue = targetValue;
+        this.isAchieved = false;
+    }
+
+    public void checkProgress(double currentValue) {
+        isAchieved = currentValue >= targetValue;
+    }
+
+    public boolean isAchieved() {
+        return isAchieved;
+    }
+
+    public String getGoalStatus() {
+        return isAchieved ? "Goal Achieved!" : "In Progress";
+    }
+}

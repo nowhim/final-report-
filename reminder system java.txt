@@ -1,0 +1,5 @@
+public class ReminderSystem {
+    public void sendReminder(User user, String message) {
+        System.out.println("Reminder to " + user.getWorkouts().size() + " workouts logged. Message: " + message);
+    }
+}

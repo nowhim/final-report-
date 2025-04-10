@@ -1,0 +1,15 @@
+public class Workout {
+    private String type;
+    private int duration; // in minutes
+    private String intensity;
+
+    public Workout(String type, int duration, String intensity) {
+        this.type = type;
+        this.duration = duration;
+        this.intensity = intensity;
+    }
+
+    public String getSummary() {
+        return type + " - " + duration + " mins - Intensity: " + intensity;
+    }
+}

@@ -1,0 +1,26 @@
+User.java
+public class User {
+    private String name;
+    private String email;
+    private List<Workout> workouts;
+
+    public User(String name, String email) {
+        this.name = name;
+        this.email = email;
+        this.workouts = new ArrayList<>();
+    }
+
+    public void addWorkout(Workout workout) {
+        workouts.add(workout);
+    }
+
+    public List<Workout> getWorkouts() {
+        return workouts;
+    }
+
+    public void viewProgress() {
+        for (Workout workout : workouts) {
+            System.out.println(workout.getSummary());
+        }
+    }
+}

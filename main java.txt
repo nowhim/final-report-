@@ -1,0 +1,22 @@
+public class Main {
+    public static void main(String[] args) {
+        User user = new User("Alice", "alice@example.com");
+
+        Workout workout1 = new Workout("Running", 30, "High");
+        user.addWorkout(workout1);
+
+        Goal goal = new Goal("Lose Weight", 5.0);
+        goal.checkProgress(3.0);
+        System.out.println(goal.getGoalStatus());
+
+        ReminderSystem reminder = new ReminderSystem();
+        reminder.sendReminder(user, "Don't forget your next workout!");
+
+        SubscriptionManager sub = new SubscriptionManager(false);
+        System.out.println("Premium Access: " + sub.canAccessPremium());
+        sub.upgradeToPremium();
+        System.out.println("Premium Access After Upgrade: " + sub.canAccessPremium());
+
+        user.viewProgress();
+    }
+}
